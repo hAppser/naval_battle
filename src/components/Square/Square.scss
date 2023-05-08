@@ -1,0 +1,29 @@
+.square {
+  background: #fff;
+  border: 1px solid #000080;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  width: 34px;
+  position: relative;
+}
+
+.square:focus {
+  outline: none;
+}
+.square span.leftLine {
+  position: absolute;
+  top: -2px;
+  left: -2rem;
+}
+
+.square span.topLine {
+  position: absolute;
+  top: -2.4rem;
+  left: 8px;
+}
