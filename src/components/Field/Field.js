@@ -4,7 +4,7 @@ import "./Field.scss";
 export default function Field(fieldRow) {
   return (
     <div className="Field">
-      {fieldRow.row.map((row, index) => {
+      {fieldRow.row.row.map((row, index) => {
         return <FieldRow key={index} row={row} />;
       })}
     </div>

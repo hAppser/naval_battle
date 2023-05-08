@@ -1,5 +1,5 @@
 import "./App.scss";
-import Field from "./components/Field/Field";
+import ShipPlacement from "./components/ShipPlacement/ShipPlacement";
 
 function App() {
   const row = [];
@@ -16,7 +16,10 @@ function App() {
   }
   return (
     <div className="App">
-      <Field row={row} />
+      <h1>naval battle</h1>
+      <main>
+        <ShipPlacement row={row} />
+      </main>
     </div>
   );
 }

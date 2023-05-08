@@ -5,8 +5,7 @@ export default function Square({ x, y }) {
 
   const leftLine = x === 0 ? true : false;
   const topLine = y === 0 ? true : false;
-  console.log("x:", x);
-  console.log("y:", y);
+
   return (
     <button className="square">
       {/* <div className="marker">{marker}</div> */}

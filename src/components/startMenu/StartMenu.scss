@@ -1,0 +1,51 @@
+$main-color: #000080;
+$link-color: #bb0000;
+
+.StartMenu {
+  height: 200px;
+  width: 200px;
+  border: 1px solid $main-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.StartMenu a {
+  color: $main-color;
+  background: #fff;
+  border: none;
+  border-bottom: 1px dashed $main-color;
+  text-decoration: none;
+  cursor: pointer;
+}
+.StartMenu a:hover {
+  color: $link-color;
+  border-bottom: 1px dashed $link-color;
+}
+.StartMenu button {
+  cursor: pointer;
+  width: 8rem;
+  height: 5rem;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  outline: none;
+  padding: 15px;
+  text-shadow: #3b3b3b 3px 0 0, #3b3b3b 2.83487px 0.981584px 0,
+    #3b3b3b 2.35766px 1.85511px 0, #3b3b3b 1.62091px 2.52441px 0,
+    #3b3b3b 0.705713px 2.91581px 0, #3b3b3b -0.287171px 2.98622px 0,
+    #3b3b3b -1.24844px 2.72789px 0, #3b3b3b -2.07227px 2.16926px 0,
+    #3b3b3b -2.66798px 1.37182px 0, #3b3b3b -2.96998px 0.42336px 0,
+    #3b3b3b -2.94502px -0.571704px 0, #3b3b3b -2.59586px -1.50383px 0,
+    #3b3b3b -1.96093px -2.27041px 0, #3b3b3b -1.11013px -2.78704px 0,
+    #3b3b3b -0.137119px -2.99686px 0, #3b3b3b 0.850987px -2.87677px 0,
+    #3b3b3b 1.74541px -2.43999px 0, #3b3b3b 2.44769px -1.73459px 0,
+    #3b3b3b 2.88051px -0.838247px 0;
+}
+.StartMenu button:active {
+  outline: 1px solid black;
+}
