@@ -1,24 +1,28 @@
-import "./App.scss";
+import { useEffect, useState } from "react";
 import ShipPlacement from "./components/ShipPlacement/ShipPlacement";
+import emptyBoard from "./utils/setBoard";
+import placeShips from "./utils/placeShips";
+import "./App.scss";
 
 function App() {
-  const row = [];
-  for (let i = 0; i < 10; i++) {
-    row.push([]);
-  }
-  for (let i = 0; i < 10; i++) {
-    for (let j = 0; j < 10; j++) {
-      row[i].push({
-        x: j,
-        y: i,
-      });
-    }
-  }
+  const [playerBoard, setPlayerBoard] = useState([]);
+  const [board, setBoard] = useState([]);
+
+  useEffect(() => {
+    setBoard(emptyBoard);
+    setPlayerBoard(emptyBoard);
+  }, []);
+
+  useEffect(() => {
+    setBoard(placeShips(emptyBoard, "enemy"));
+    setPlayerBoard(placeShips(emptyBoard, "player"));
+  }, []);
+  console.log(playerBoard);
   return (
     <div className="App">
       <h1>naval battle</h1>
       <main>
-        <ShipPlacement row={row} />
+        <ShipPlacement row={playerBoard} />
       </main>
     </div>
   );

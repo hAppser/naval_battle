@@ -1,8 +1,7 @@
 import "./StartMenu.scss";
-export default function StartMenu() {
+export default function StartMenu(randomise) {
   return (
     <div className="StartMenu">
-      <a>Randomise</a>
       <button>Start game</button>
     </div>
   );

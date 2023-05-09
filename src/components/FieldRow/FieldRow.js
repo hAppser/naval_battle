@@ -5,7 +5,15 @@ export default function FieldRow({ row }) {
   return (
     <div className="FieldRow">
       {row.map((square, index) => {
-        return <Square key={index} x={square.x} y={square.y} />;
+        return (
+          <Square
+            key={index}
+            x={square.x}
+            y={square.y}
+            className={square.className}
+            containShip={square.containShip}
+          />
+        );
       })}
     </div>
   );

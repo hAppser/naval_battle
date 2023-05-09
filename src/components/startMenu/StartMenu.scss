@@ -10,15 +10,14 @@ $link-color: #bb0000;
   justify-content: center;
   align-items: center;
 }
-.StartMenu a {
+.StartMenu p {
   color: $main-color;
   background: #fff;
   border: none;
   border-bottom: 1px dashed $main-color;
-  text-decoration: none;
   cursor: pointer;
 }
-.StartMenu a:hover {
+.StartMenu p:hover {
   color: $link-color;
   border-bottom: 1px dashed $link-color;
 }
