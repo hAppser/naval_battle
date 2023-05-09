@@ -16,21 +16,22 @@
 .square:focus {
   outline: none;
 }
-.square span.leftLine {
-  position: absolute;
-  top: -2px;
-  left: -2rem;
-  cursor: default;
-  pointer-events: none;
-}
-
-.square span.topLine {
-  position: absolute;
-  top: -2.4rem;
-  left: 8px;
-  cursor: default;
-  pointer-events: none;
-}
 .playership {
   background: pink;
+}
+.hit {
+  background: crimson;
+  border: 1px solid #fff;
+  pointer-events: none;
+}
+.hit::after {
+  content: "x";
+}
+.miss {
+  background: #ccc;
+  border: 1px solid #fff;
+  pointer-events: none;
+}
+.miss::after {
+  content: "O";
 }
