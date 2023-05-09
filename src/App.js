@@ -7,11 +7,11 @@ import "./App.scss";
 function App() {
   const [playerBoard, setPlayerBoard] = useState([]);
   const [enemyBoard, setEnemyBoard] = useState([]);
-
   useEffect(() => {
     setEnemyBoard(placeShips(emptyBoard, "enemy"));
     setPlayerBoard(placeShips(emptyBoard, "player"));
   }, []);
+
   return (
     <div className="App">
       <h1>real naval battle</h1>

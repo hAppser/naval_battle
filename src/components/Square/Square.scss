@@ -6,11 +6,10 @@
   font-weight: bold;
   line-height: 34px;
   height: 34px;
+  width: 34px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
-  width: 34px;
-  position: relative;
   cursor: pointer;
 }
 .square:focus {
@@ -18,6 +17,7 @@
 }
 .playership {
   background: pink;
+  pointer-events: none;
 }
 .hit {
   background: crimson;

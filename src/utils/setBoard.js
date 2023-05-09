@@ -9,7 +9,6 @@ function setBoard() {
         x: j,
         y: i,
         containShip: false,
-        isHit: false,
       });
     }
   }
