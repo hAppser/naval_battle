@@ -22,7 +22,7 @@ function placeShips(board, player) {
 
       if (!conflict) {
         for (let i = 0; i < length; i++) {
-          let className = `square ${player}ship ${length} ${
+          let className = `${player}ship ${length} ${
             horizontal ? "vertical" : "horizontal"
           }`;
           newBoard[horizontal ? x + i : x][horizontal ? y : y + i] = {

@@ -1,27 +1,22 @@
 import { useEffect, useState } from "react";
-import ShipPlacement from "./components/ShipPlacement/ShipPlacement";
 import emptyBoard from "./utils/setBoard";
 import placeShips from "./utils/placeShips";
+import VersusArea from "./components/VersusArea/VersusArea";
 import "./App.scss";
 
 function App() {
   const [playerBoard, setPlayerBoard] = useState([]);
-  const [board, setBoard] = useState([]);
+  const [enemyBoard, setEnemyBoard] = useState([]);
 
   useEffect(() => {
-    setBoard(emptyBoard);
-    setPlayerBoard(emptyBoard);
-  }, []);
-
-  useEffect(() => {
-    setBoard(placeShips(emptyBoard, "enemy"));
+    setEnemyBoard(placeShips(emptyBoard, "enemy"));
     setPlayerBoard(placeShips(emptyBoard, "player"));
   }, []);
   return (
     <div className="App">
-      <h1>naval battle</h1>
+      <h1>real naval battle</h1>
       <main>
-        <ShipPlacement row={playerBoard} />
+        <VersusArea player={playerBoard} bot={enemyBoard} />
       </main>
     </div>
   );
