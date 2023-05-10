@@ -1,24 +1,22 @@
-import { useEffect, useState } from "react";
-import emptyBoard from "./utils/setBoard";
-import placeShips from "./utils/placeShips";
 import VersusArea from "./components/VersusArea/VersusArea";
 import "./App.scss";
-
+import { useEffect, useState } from "react";
+import setBoard from "./hooks/useCreateBoards";
 //TO DO
 
 // 1) Интеллект бота
-// 1.1) Стрельба
-// 1.2) Передача хода
-// 2) Конец игры
+// 2) Стрельба
+// 3) Передача хода
+// 4) Конец игры
 
 function App() {
-  const [playerBoard, setPlayerBoard] = useState([]);
-  const [enemyBoard, setEnemyBoard] = useState([]);
-  useEffect(() => {
-    setEnemyBoard(placeShips(emptyBoard, "enemy"));
-    setPlayerBoard(placeShips(emptyBoard, "player"));
-  }, []);
+  const [playerBoard, setPlayerBoard] = useState(setBoard());
+  const [enemyBoard, setEnemyBoard] = useState(setBoard());
 
+  useEffect(() => {
+    setPlayerBoard(setBoard());
+    setEnemyBoard(setBoard());
+  }, []);
   return (
     <div className="App">
       <h1>real naval battle</h1>

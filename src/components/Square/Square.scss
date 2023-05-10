@@ -15,14 +15,15 @@
 .square:focus {
   outline: none;
 }
-.playership {
+.square:hover {
+  border: 3px solid black;
+}
+.ship {
   background: pink;
-  pointer-events: none;
 }
 .hit {
   background: crimson;
   border: 1px solid #fff;
-  pointer-events: none;
 }
 .hit::after {
   content: "x";
@@ -34,4 +35,10 @@
 }
 .miss::after {
   content: "O";
+}
+@media screen and (max-width: 350px) {
+  .square {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
 }
