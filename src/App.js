@@ -15,11 +15,12 @@ import "./App.scss";
 function App() {
   const [playerBoard, setPlayerBoard] = useState([]);
   const [enemyBoard, setEnemyBoard] = useState([]);
+
   useEffect(() => {
     setEnemyBoard(placeShips(emptyBoard, "enemy"));
     setPlayerBoard(placeShips(emptyBoard, "player"));
   }, []);
-  console.log(emptyBoard[1][0].containShip, "x");
+
   return (
     <div className="App">
       <h1>real naval battle</h1>

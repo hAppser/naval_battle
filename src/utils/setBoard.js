@@ -11,6 +11,7 @@ function setBoard() {
         x: x,
         y: y,
         containShip: false,
+        isHit: false,
       });
     }
   }
