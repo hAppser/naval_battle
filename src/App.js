@@ -4,6 +4,14 @@ import placeShips from "./utils/placeShips";
 import VersusArea from "./components/VersusArea/VersusArea";
 import "./App.scss";
 
+//TO DO
+
+// 1) Интеллект бота
+// 1.1) Стрельба
+// 1.2) Передача хода
+// 2) Конец игры
+// 3)
+
 function App() {
   const [playerBoard, setPlayerBoard] = useState([]);
   const [enemyBoard, setEnemyBoard] = useState([]);
@@ -11,7 +19,7 @@ function App() {
     setEnemyBoard(placeShips(emptyBoard, "enemy"));
     setPlayerBoard(placeShips(emptyBoard, "player"));
   }, []);
-
+  console.log(emptyBoard[1][0].containShip, "x");
   return (
     <div className="App">
       <h1>real naval battle</h1>
