@@ -20,7 +20,6 @@ function App() {
     setEnemyBoard(placeShips(emptyBoard, "enemy"));
     setPlayerBoard(placeShips(emptyBoard, "player"));
   }, []);
-
   return (
     <div className="App">
       <h1>real naval battle</h1>
