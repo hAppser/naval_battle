@@ -1,5 +1,3 @@
-import { compileString } from "sass";
-
 const emptyBoard = [];
 function setBoard() {
   for (let i = 0; i < 10; i++) {
@@ -11,7 +9,6 @@ function setBoard() {
         x: x,
         y: y,
         containShip: false,
-        isHit: false,
       });
     }
   }
