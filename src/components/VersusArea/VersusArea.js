@@ -5,8 +5,8 @@ import "./VersusArea.scss";
 export default function VersusArea({ player, bot }) {
   return (
     <div className="VersusArea">
-      <Field row={player} />
-      <Field row={bot} />
+      <Field data={bot} />
+      <Field data={player} friendly={"player"} />
     </div>
   );
 }

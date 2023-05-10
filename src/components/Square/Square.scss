@@ -6,23 +6,24 @@
   font-weight: bold;
   line-height: 34px;
   height: 34px;
+  width: 34px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
-  width: 34px;
-  position: relative;
   cursor: pointer;
 }
 .square:focus {
   outline: none;
 }
-.playership {
+.square:hover {
+  border: 3px solid black;
+}
+.ship {
   background: pink;
 }
 .hit {
   background: crimson;
   border: 1px solid #fff;
-  pointer-events: none;
 }
 .hit::after {
   content: "x";
@@ -34,4 +35,10 @@
 }
 .miss::after {
   content: "O";
+}
+@media screen and (max-width: 350px) {
+  .square {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
 }

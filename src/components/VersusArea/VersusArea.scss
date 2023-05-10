@@ -4,3 +4,12 @@
   justify-content: space-around;
   align-items: center;
 }
+@media screen and (max-width: 720px) {
+  .VersusArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}

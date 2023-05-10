@@ -6,7 +6,6 @@ $main-color: #000080;
   border-radius: 30px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
-
 .App h1 {
   text-align: center;
   text-transform: uppercase;
@@ -25,4 +24,12 @@ $main-color: #000080;
 }
 main {
   margin-top: 20vh;
+}
+@media screen and (max-width: 720px) {
+  .App {
+    height: 800px;
+  }
+  main {
+    margin-top: auto;
+  }
 }

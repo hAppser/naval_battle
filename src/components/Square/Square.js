@@ -1,11 +1,9 @@
 import "./Square.scss";
-import fire from "../../utils/fire";
 
-export default function Square({ x, y, className }) {
+export default function Square({ value, onClick, friendly }) {
   return (
     <button
-      onClick={(e, board, x, y) => fire(e)}
-      className={`square ${className}`}
+      className={`square ${value !== 0 && friendly === "player" ? "ship" : ""}`}
     ></button>
   );
 }

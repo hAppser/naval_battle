@@ -1,11 +1,23 @@
-import FieldRow from "../FieldRow/FieldRow";
+import Square from "../Square/Square";
 import "./Field.scss";
-
-export default function Field(fieldRow) {
+export default function Field({ data, friendly }) {
   return (
-    <div className="Field">
-      {fieldRow.row.map((row, index) => {
-        return <FieldRow key={index} row={row} />;
+    <div className="board">
+      {data[0].map((row, rowIndex) => {
+        return (
+          <div key={`${rowIndex}`} className="row">
+            {row.map((cell, colIndex) => {
+              return (
+                <Square
+                  key={`${row[rowIndex]}-${rowIndex}-${colIndex}`}
+                  value={cell}
+                  friendly={friendly}
+                  // onClick={() => (rowIndex, colIndex)}
+                />
+              );
+            })}
+          </div>
+        );
       })}
     </div>
   );
