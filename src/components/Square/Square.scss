@@ -11,30 +11,35 @@
   margin-top: -1px;
   padding: 0;
   cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    border: 3px solid black;
+  }
 }
-.square:focus {
-  outline: none;
-}
-.square:hover {
-  border: 3px solid black;
-}
+
 .ship {
   background: pink;
 }
 .hit {
   background: crimson;
   border: 1px solid #fff;
+  &::after {
+    content: "x";
+  }
 }
-.hit::after {
-  content: "x";
-}
+
 .miss {
   background: #ccc;
   border: 1px solid #fff;
-  pointer-events: none;
+  &::after {
+    content: "O";
+  }
 }
-.miss::after {
-  content: "O";
+
+.player {
+  pointer-events: none;
 }
 @media screen and (max-width: 350px) {
   .square {

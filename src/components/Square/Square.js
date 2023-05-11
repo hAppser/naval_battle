@@ -1,16 +1,21 @@
 import "./Square.scss";
 
-export default function Square({ value, friendly, onClick }) {
+const Square = ({ value, friendly, rowIndex, colIndex, onClick }) => {
   return (
     <button
+      onClick={() => onClick(value, rowIndex, colIndex)}
       className={`square ${
         value === 1 && friendly === "player"
-          ? "ship"
+          ? "player ship"
           : value === 2
           ? " hit"
+          : value === 3
+          ? " miss"
+          : friendly === "player"
+          ? "player"
           : ""
       }`}
-      onClick={() => onClick()}
     ></button>
   );
-}
+};
+export default Square;

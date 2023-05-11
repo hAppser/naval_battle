@@ -1,19 +1,23 @@
 import Square from "../Square/Square";
-import fireHandler from "../../lib/fireHandler";
 import "./Field.scss";
-export default function Field({ data, friendly }) {
+
+export default function Field({ board, friendly, onClick }) {
   return (
     <div className="board">
-      {data[0].map((row, rowIndex) => {
+      {board[0].map((row, rowIndex) => {
         return (
           <div key={`${rowIndex}`} className="row">
             {row.map((cell, colIndex) => {
               return (
                 <Square
                   key={`${row[rowIndex]}-${rowIndex}-${colIndex}`}
+                  rowIndex={rowIndex}
+                  colIndex={colIndex}
                   value={cell}
                   friendly={friendly}
-                  onClick={() => fireHandler(data[0], rowIndex, colIndex)}
+                  onClick={(value, rowIndex, colIndex) =>
+                    onClick(cell, rowIndex, colIndex)
+                  }
                 />
               );
             })}
