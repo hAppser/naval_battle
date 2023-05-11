@@ -1,11 +1,12 @@
 import VersusArea from "./components/VersusArea/VersusArea";
-import "./App.scss";
 import { useEffect, useState } from "react";
 import setBoard from "./hooks/useCreateBoards";
+import "./App.scss";
+
 //TO DO
 
-// 1) Интеллект бота
-// 2) Стрельба
+// 1) Стрельба
+// 2) Интеллект бота
 // 3) Передача хода
 // 4) Конец игры
 

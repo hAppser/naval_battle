@@ -1,4 +1,5 @@
 import Square from "../Square/Square";
+import fireHandler from "../../lib/fireHandler";
 import "./Field.scss";
 export default function Field({ data, friendly }) {
   return (
@@ -12,7 +13,7 @@ export default function Field({ data, friendly }) {
                   key={`${row[rowIndex]}-${rowIndex}-${colIndex}`}
                   value={cell}
                   friendly={friendly}
-                  // onClick={() => (rowIndex, colIndex)}
+                  onClick={() => fireHandler(data[0], rowIndex, colIndex)}
                 />
               );
             })}
